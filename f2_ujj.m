@@ -16,7 +16,7 @@ fingerprint_ref(tks);
 rt=fingerprint_illeszt(test);
 
 # Eredmények megjelenítése 
-for i=1:8
+for i=7:7
   Y=wavread(test{i});
   figure;
   illustrate_match(Y, 16000, tks, 1, test{i});

@@ -33,7 +33,7 @@ else
 end
 
 disp ("Ujjlenyomatos illesztés eredménye (index, időben helyes illeszkedő landmarkok száma, egyezés ideje, összes illeszkedő landmark száma):");
-if (rt{1,1}(2)<3)
+if ((size(rt{1,1},1)==0)||(rt{1,1}(2)<3))
   disp ("Nincs találat");
 else
   disp (rt{1});

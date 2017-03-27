@@ -42,13 +42,14 @@ Lq = [Lq;find_landmarks(D(round(landmarks_hopt/2*SR):end),SR, dens)];
 Lq = [Lq;find_landmarks(D(round(3*landmarks_hopt/4*SR):end),SR, dens)];
 % add in quarter-hop offsets too for even better recall
 Hq = unique(landmark2hash(Lq), 'rows');
-disp(['landmarks ',num2str(size(Lq,1)),' -> ', num2str(size(Hq,1)),' hashes']);
+%disp(['landmarks ',num2str(size(Lq,1)),' -> ', num2str(size(Hq,1)),' hashes']);
 
 Rt = get_hash_hits(Hq);
+
 nr = size(Rt,1);
 
 if nr > 0
-
+  
   % Find all the unique tracks referenced
   [utrks,xx] = unique(sort(Rt(:,1)),'first');
   utrkcounts = diff([xx',nr]);
@@ -103,5 +104,6 @@ if nr > 0
 
 else
   R = zeros(0,4);
-  disp('*** NO HITS FOUND ***');
+  L = [];
+%  disp('*** NO HITS FOUND ***');
 end
