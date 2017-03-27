@@ -26,9 +26,11 @@ end
 
 % Lm returns the matching landmarks in the original track's time frame
 % Filter to be only those consistent with modal dt (+/- 1 step)
-if (size(Lm,1)>0)
-  Lm = Lm( abs(Lm(:,5)-R(IX,3)) < 1 ,:);
+if (size(Lm,1)==0)
+  return
 end
+  
+Lm = Lm( abs(Lm(:,5)-R(IX,3)) < 1 ,:);
 
 % Recalculate the landmarks for the query
 dens = 7;
@@ -39,6 +41,7 @@ show_landmarks(DQ,SR,Lq);
 
 % Recalculate landmarks for the match piece
 tbase = 0.032;  % time base of analysis
+
 matchtrk = R(IX,1);
 matchdt = R(IX,3);
 [d,SRO] = readaudio(FL{matchtrk});
@@ -54,11 +57,10 @@ name(find(name == '_')) = ' ';
 title(['Match: ',name,' at ',num2str(matchdt*tbase),' sec']);
 
 % Highlight the matching landmarks
-if (size(Lm,1)>0)
-  show_landmarks([],SRO,Lm,[],'o-g');
-  subplot(211)
-  show_landmarks([],SRO,Lm-repmat([matchdt 0 0 0 0],size(Lm,1),1),[],'o-g');
-end
+show_landmarks([],SRO,Lm,[],'o-g');
+subplot(211)
+ show_landmarks([],SRO,Lm-repmat([matchdt 0 0 0 0],size(Lm,1),1),[],'o-g');
+
 set (get (gca, "title"), "interpreter", "none");
 title(FN)
 
