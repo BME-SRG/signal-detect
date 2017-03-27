@@ -1,6 +1,6 @@
-## Resources for Signal Detection Laboratory Measurement  
+## Resources for Signal Detection Laboratory  
 
-This repository contains resources and materials used in **Signal Detection Laboratory Measurement** as part of course *Data and Multimedia Mining Laboratory* at Budapest University of Technology and Economics
+This repository contains resources and materials used in **Signal Detection Laboratory** as part of course *Data and Multimedia Mining Laboratory* at Budapest University of Technology and Economics
 
 The implementation is built on the following web resources:  
 - Steeneken, H.J.M. and Varga, A. (1993), "Noise Data-base", web resource, available: http://www.steeneken.nl/7-noise-data-base/  
