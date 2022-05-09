@@ -1,3 +1,7 @@
+## VirtualBox image
+
+https://drive.google.com/file/d/1LuOsrCLpkpeX_987AbXiWEQQr14WqzqM/view?usp=sharing
+
 ## Resources for Signal Detection Laboratory  
 
 This repository contains resources and materials used in **Signal Detection Laboratory** as part of course *Data and Multimedia Mining Laboratory* at Budapest University of Technology and Economics
